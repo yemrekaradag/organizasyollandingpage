@@ -24,7 +24,7 @@ Projeyi kendi bilgisayarınızda çalıştırmak için aşağıdaki adımları i
 
 1. **Projeyi Klonlayın (veya indirin):**
    ```bash
-   git clone https://github.com/KULLANICI_ADINIZ/organizasyol-landing-page.git
+   git clone https://github.com/yemrekaradag/organizasyollandingpage.git
    cd organizasyol-landing-page
    ```
 
