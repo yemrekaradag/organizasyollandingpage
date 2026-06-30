@@ -1,5 +1,5 @@
-import { CalendarDays, Camera, Music } from 'lucide-react';
-import './Footer.css';
+import { CalendarDays, Camera } from "lucide-react";
+import "./Footer.css";
 
 export default function Footer() {
   return (
@@ -14,18 +14,25 @@ export default function Footer() {
               <span className="logo-text">Organizasyol</span>
             </div>
             <p className="footer-desc">
-              Sosyalleşmenin yeni yolu. Keşfet, katıl, kendi organizasyonunu yarat!
+              Sosyalleşmenin yeni yolu. Keşfet, katıl, kendi organizasyonunu
+              yarat!
             </p>
           </div>
-          
+
           <div className="footer-links-group">
             <h4 className="footer-title">Uygulamayı İndir</h4>
             <div className="store-buttons">
               <a href="#appstore" className="store-btn glass-panel">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store" />
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+                  alt="App Store"
+                />
               </a>
               <a href="#playstore" className="store-btn glass-panel">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" />
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                  alt="Google Play"
+                />
               </a>
             </div>
           </div>
@@ -33,7 +40,12 @@ export default function Footer() {
           <div className="footer-links-group">
             <h4 className="footer-title">Bizi Takip Edin</h4>
             <div className="social-links">
-              <a href="https://instagram.com" target="_blank" rel="noreferrer" className="social-btn glass-panel">
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noreferrer"
+                className="social-btn glass-panel"
+              >
                 <Camera size={24} />
               </a>
             </div>
@@ -48,7 +60,10 @@ export default function Footer() {
             <a href="#gizlilik">Gizlilik Politikası</a>
             <a href="#kullanim">Kullanım Koşulları</a>
           </div>
-          <p className="copyright">&copy; {new Date().getFullYear()} Organizasyol. Tüm hakları saklıdır.</p>
+          <p className="copyright">
+            &copy; {new Date().getFullYear()} Organizasyol. Tüm hakları
+            saklıdır.
+          </p>
         </div>
       </div>
     </footer>

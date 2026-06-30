@@ -29,16 +29,55 @@
 }
 
 .hero-title {
-  font-size: 4rem;
+  font-size: 3.2rem;
   font-weight: 800;
   margin-bottom: 24px;
   letter-spacing: -1px;
+  line-height: 1.2;
+}
+
+.hero-tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 6px;
+  border-radius: 99px;
+  border: 1px solid var(--glass-border);
+  width: fit-content;
+}
+
+.tab-btn {
+  background: transparent;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 99px;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+  color: #fff;
+}
+
+.tab-btn.active {
+  background: var(--gradient-primary);
+  color: white;
+  box-shadow: 0 4px 15px rgba(90, 24, 154, 0.3);
+}
+
+.tab-content-container {
+  min-height: 80px;
+  margin-bottom: 30px;
 }
 
 .hero-subtitle {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   color: var(--text-muted);
-  margin-bottom: 40px;
+  margin-bottom: 0;
   line-height: 1.6;
 }
 
@@ -126,7 +165,11 @@
   }
 
   .hero-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
+  }
+
+  .hero-tabs {
+    margin: 0 auto 24px auto;
   }
 
   .phone-mockup {
@@ -143,11 +186,22 @@
   }
 
   .hero-title {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
   }
 
   .hero-subtitle {
-    font-size: 1.1rem;
+    font-size: 1rem;
+  }
+
+  .hero-tabs {
+    flex-direction: column;
+    border-radius: 16px;
+    width: 100%;
+  }
+
+  .tab-btn {
+    border-radius: 12px;
+    width: 100%;
   }
 
   .btn-lg {
