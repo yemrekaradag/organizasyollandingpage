@@ -5,20 +5,20 @@ import './FAQ.css';
 
 const faqs = [
   {
-    question: 'Organizasyol nedir?',
-    answer: 'Organizasyol, etrafınızdaki sosyal etkinlikleri keşfedebileceğiniz, kendi organizasyonlarınızı yaratıp katılımcıları yönetebileceğiniz yeni nesil bir sosyalleşme platformudur.'
+    question: "Organizasyol'u kullanmak ücretli mi?",
+    answer: "Hayır, hem hizmet arayanlar hem de hizmet verenler için uygulamayı kullanmak tamamen ücretsizdir."
   },
   {
-    question: 'Uygulamayı kullanmak ücretli mi?',
-    answer: 'Hayır, uygulamamızı indirmek ve standart organizasyonlara katılmak tamamen ücretsizdir.'
+    question: "Ödemeler veya anlaşmalar uygulama üzerinden mi yapılıyor?",
+    answer: "Hayır, uygulama içinde herhangi bir ödeme veya aracı yoktur; anlaşmanızı ve ödemenizi doğrudan WhatsApp üzerinden kendiniz yaparsınız."
   },
   {
-    question: 'Kendi organizasyonumu nasıl oluştururum?',
-    answer: 'Uygulama içinde "Oluştur" butonuna tıklayarak etkinliğinizin detaylarını girebilir, katılımcı sınırını belirleyip yayınlayabilirsiniz.'
+    question: "Sistemde aracı veya komisyon var mı?",
+    answer: "Kesinlikle hayır; Organizasyol komisyonsuz bir pazar yeridir, kazancın tamamı doğrudan hizmet verene kalır."
   },
   {
-    question: 'Güvenlik nasıl sağlanıyor?',
-    answer: 'Kullanıcılarımız doğrulanmış profillere sahiptir. Ayrıca katılımcıları siz onaylarsınız ve sadece onaylı kişilerle uygulama içi mesajlaşabilirsiniz.'
+    question: "Hizmet verenlerle nasıl iletişime geçebilirim?",
+    answer: "Beğendiğiniz hizmetin veya profilin üzerindeki butona tıklayarak doğrudan o kişinin veya işletmenin WhatsApp hattına bağlanabilirsiniz."
   }
 ];
 

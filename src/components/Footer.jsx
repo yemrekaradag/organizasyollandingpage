@@ -22,13 +22,13 @@ export default function Footer() {
           <div className="footer-links-group">
             <h4 className="footer-title">Uygulamayı İndir</h4>
             <div className="store-buttons">
-              <a href="#appstore" className="store-btn glass-panel">
+              <a href="#appstore" className="store-btn">
                 <img
                   src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
                   alt="App Store"
                 />
               </a>
-              <a href="#playstore" className="store-btn glass-panel">
+              <a href="#playstore" className="store-btn">
                 <img
                   src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
                   alt="Google Play"
@@ -41,7 +41,7 @@ export default function Footer() {
             <h4 className="footer-title">Bizi Takip Edin</h4>
             <div className="social-links">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/organizasyolcom/"
                 target="_blank"
                 rel="noreferrer"
                 className="social-btn glass-panel"

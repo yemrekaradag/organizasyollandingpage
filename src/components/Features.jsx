@@ -22,7 +22,7 @@ export default function Features() {
       <div className="container">
         <div className="features-header">
           <h2 className="section-title">Neden Organizasyol?</h2>
-          <p className="section-subtitle">Sıradan etkinlikleri unutun. Sosyalleşmenin en yenilikçi haliyle tanışın.</p>
+          <p className="section-subtitle">Aradığın organizasyon hizmetini bulmanın da yeni müşterilere ulaşmanın da en kısa yolu! Üstelik aracı yok, komisyon yok; tamamen ücretsiz.</p>
         </div>
 
         <motion.div 
@@ -36,13 +36,13 @@ export default function Features() {
           <motion.div className="feature-item" variants={itemVariants}>
             <div className="feature-text">
               <div className="step-number">01</div>
-              <h3 className="feature-title">Keşfet ve Katıl</h3>
+              <h3 className="feature-title">Keşfet ve İncele</h3>
               <p className="feature-desc">
-                Çevrendeki en popüler organizasyonları harita üzerinden keşfet. Sana uygun olanlara tek tıkla istek gönder ve eğlenceye dahil ol.
+                Aradığın tüm organizasyon hizmetlerini ve mekanlarını listele, ihtiyacın olan hizmeti hemen bul.
               </p>
             </div>
             <div className="feature-image-wrapper glass-panel">
-              <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=600&auto=format&fit=crop" alt="Keşfet" className="feature-image" loading="lazy" />
+              <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=600&auto=format&fit=crop" alt="Keşfet ve İncele" className="feature-image" loading="lazy" />
             </div>
           </motion.div>
 
@@ -50,13 +50,13 @@ export default function Features() {
           <motion.div className="feature-item reverse" variants={itemVariants}>
             <div className="feature-text">
               <div className="step-number">02</div>
-              <h3 className="feature-title">Kendi Etkinliğini Yarat</h3>
+              <h3 className="feature-title">Doğrudan İletişime Geç</h3>
               <p className="feature-desc">
-                Arkadaşlarınla buluşmak ya da yeni insanlarla tanışmak mı istiyorsun? Kendi organizasyonunu oluştur, katılımcıları seç ve yönet.
+                Beğendiğin hizmetin üzerindeki butona basarak, aracı olmadan doğrudan hizmet verenle WhatsApp üzerinden konuşmaya başla.
               </p>
             </div>
             <div className="feature-image-wrapper glass-panel">
-              <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=600&auto=format&fit=crop" alt="Etkinlik Yarat" className="feature-image" loading="lazy" />
+              <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=600&auto=format&fit=crop" alt="Doğrudan İletişim" className="feature-image" loading="lazy" />
             </div>
           </motion.div>
 
@@ -64,13 +64,27 @@ export default function Features() {
           <motion.div className="feature-item" variants={itemVariants}>
             <div className="feature-text">
               <div className="step-number">03</div>
-              <h3 className="feature-title">Anında İletişim</h3>
+              <h3 className="feature-title">Ücretsiz ve Komisyonsuz</h3>
               <p className="feature-desc">
-                Onaylanan katılımcılarla uygulama içinden güvenle mesajlaş. Planlarını detaylandır ve unutulmaz anılar biriktir.
+                Uygulama içinde hiçbir aracı veya gizli ücret yoktur; tamamen ücretsiz bir şekilde anlaşmanızı kendiniz yaparsınız.
               </p>
             </div>
             <div className="feature-image-wrapper glass-panel">
-              <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=600&auto=format&fit=crop" alt="İletişim" className="feature-image" loading="lazy" />
+              <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=600&auto=format&fit=crop" alt="Ücretsiz ve Komisyonsuz" className="feature-image" loading="lazy" />
+            </div>
+          </motion.div>
+
+          {/* Feature 4 */}
+          <motion.div className="feature-item reverse" variants={itemVariants}>
+            <div className="feature-text">
+              <div className="step-number">04</div>
+              <h3 className="feature-title">İşini Ücretsiz Büyüt</h3>
+              <p className="feature-desc">
+                Hizmetlerini platformda sergileyerek hiçbir ücret ödemeden binlerce yeni müşteriye doğrudan ulaş.
+              </p>
+            </div>
+            <div className="feature-image-wrapper glass-panel">
+              <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=600&auto=format&fit=crop" alt="İşini Ücretsiz Büyüt" className="feature-image" loading="lazy" />
             </div>
           </motion.div>
 
