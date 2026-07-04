@@ -1,4 +1,5 @@
 import { CalendarDays, Camera } from "lucide-react";
+import { Link } from "react-router-dom";
 import "./Footer.css";
 
 export default function Footer() {
@@ -14,8 +15,9 @@ export default function Footer() {
               <span className="logo-text">Organizasyol</span>
             </div>
             <p className="footer-desc">
-              Sosyalleşmenin yeni yolu. Keşfet, katıl, kendi organizasyonunu
-              yarat!
+              Organizasyon Planlamak da, İşini Büyütmek de Artık Çok Kolay!
+              <br /><br />
+              Organizasyol'u hemen indir, yerini al.
             </p>
           </div>
 
@@ -54,7 +56,7 @@ export default function Footer() {
 
         <div className="footer-bottom">
           <div className="legal-links">
-            <a href="#aydinlatma">Aydınlatma Metni</a>
+            <Link to="/aydinlatma">Aydınlatma Metni</Link>
             <a href="#veri-saklama">Veri Saklama ve İmha Politikası</a>
             <a href="#veri-ihlal">Veri İhlal Müdahale Planı</a>
             <a href="#gizlilik">Gizlilik Politikası</a>
