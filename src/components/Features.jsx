@@ -42,7 +42,7 @@ export default function Features() {
               </p>
             </div>
             <div className="feature-image-wrapper glass-panel">
-              <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=600&auto=format&fit=crop" alt="Keşfet ve İncele" className="feature-image" loading="lazy" />
+              <img src="/discover.png" alt="Keşfet ve İncele" className="feature-image" loading="lazy" />
             </div>
           </motion.div>
 
@@ -56,7 +56,7 @@ export default function Features() {
               </p>
             </div>
             <div className="feature-image-wrapper glass-panel">
-              <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=600&auto=format&fit=crop" alt="Doğrudan İletişim" className="feature-image" loading="lazy" />
+              <img src="/contact.png" alt="Doğrudan İletişim" className="feature-image" loading="lazy" />
             </div>
           </motion.div>
 
@@ -84,7 +84,7 @@ export default function Features() {
               </p>
             </div>
             <div className="feature-image-wrapper glass-panel">
-              <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=600&auto=format&fit=crop" alt="İşini Ücretsiz Büyüt" className="feature-image" loading="lazy" />
+              <img src="/company.png" alt="İşini Ücretsiz Büyüt" className="feature-image" loading="lazy" />
             </div>
           </motion.div>
 

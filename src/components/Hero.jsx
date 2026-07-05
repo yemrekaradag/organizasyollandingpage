@@ -1,10 +1,30 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { FaApple, FaGooglePlay } from "react-icons/fa";
 import "./Hero.css";
+  const screens = [
+    "/home-screen.png",
+    "/organization.png",
+    "/reel-1.png",
+    "/reel-2.png",
+    "/organization-detail.png",
+    "/organization-detail-2.png",
+  ];
 
 export default function Hero() {
   const [activeTab, setActiveTab] = useState('user');
+  // Screens for the phone-mockup
+
+  const [currentScreen, setCurrentScreen] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentScreen((prev) => (prev + 1) % screens.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
 
   return (
     <section className="hero">
@@ -80,11 +100,18 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <div className="phone-mockup glass-panel">
-            <img
-              src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600&auto=format&fit=crop"
-              alt="Organizasyol App Screen"
-              className="phone-screen"
-            />
+            <AnimatePresence mode="wait">
+              <motion.img
+                key={screens[currentScreen]}
+                src={screens[currentScreen]}
+                alt="Organizasyol App Screen"
+                className="phone-screen"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.35, ease: "easeInOut" }}
+              />
+            </AnimatePresence>
           </div>
           {/* Decorative Elements */}
           <div className="floating-bubble bubble-1"></div>
