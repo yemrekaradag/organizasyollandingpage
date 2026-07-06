@@ -2,14 +2,21 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { FaApple, FaGooglePlay } from "react-icons/fa";
 import "./Hero.css";
-  const screens = [
-    "/home-screen.png",
-    "/organization.png",
-    "/reel-1.png",
-    "/reel-2.png",
-    "/organization-detail.png",
-    "/organization-detail-2.png",
-  ];
+import homeScreen from "../assets/home-screen.png";
+import organization from "../assets/organization.png";
+import reel1 from "../assets/reel-1.png";
+import reel2 from "../assets/reel-2.png";
+import organizationDetail from "../assets/organization-detail.png";
+import organizationDetail2 from "../assets/organization-detail-2.png";
+
+const screens = [
+  homeScreen,
+  organization,
+  reel1,
+  reel2,
+  organizationDetail,
+  organizationDetail2,
+];
 
 export default function Hero() {
   const [activeTab, setActiveTab] = useState('user');

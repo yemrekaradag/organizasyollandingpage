@@ -1,5 +1,9 @@
 import { motion } from 'framer-motion';
 import './Features.css';
+import discover from "../assets/discover.png";
+import contact from "../assets/contact.png";
+import commission from "../assets/commission.jpeg";
+
 
 export default function Features() {
   const containerVariants = {
@@ -42,7 +46,7 @@ export default function Features() {
               </p>
             </div>
             <div className="feature-image-wrapper glass-panel">
-              <img src="/discover.png" alt="Keşfet ve İncele" className="feature-image" loading="lazy" />
+              <img src={discover} alt="Keşfet ve İncele" className="feature-image" loading="lazy" />
             </div>
           </motion.div>
 
@@ -56,7 +60,7 @@ export default function Features() {
               </p>
             </div>
             <div className="feature-image-wrapper glass-panel">
-              <img src="/contact.png" alt="Doğrudan İletişim" className="feature-image" loading="lazy" />
+              <img src={contact} alt="Doğrudan İletişim" className="feature-image" loading="lazy" />
             </div>
           </motion.div>
 
@@ -64,30 +68,15 @@ export default function Features() {
           <motion.div className="feature-item" variants={itemVariants}>
             <div className="feature-text">
               <div className="step-number">03</div>
-              <h3 className="feature-title">Ücretsiz ve Komisyonsuz</h3>
+              <h3 className="feature-title">Aracısız, Komisyonsuz, Tamamen Ücretsiz!</h3>
               <p className="feature-desc">
-                Uygulama içinde hiçbir aracı veya gizli ücret yoktur; tamamen ücretsiz bir şekilde anlaşmanızı kendiniz yaparsınız.
+                Ne hizmet veren için komisyon ne de müşteri için gizli bir ücret var. Hizmetlerinizi ücretsiz sergileyin veya aradığınız hizmeti bulun; anlaşmanızı hiçbir ekstra maliyet olmadan, doğrudan kendiniz yapın.
               </p>
             </div>
             <div className="feature-image-wrapper glass-panel">
-              <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=600&auto=format&fit=crop" alt="Ücretsiz ve Komisyonsuz" className="feature-image" loading="lazy" />
+              <img src={commission} alt="Ücretsiz ve Komisyonsuz" className="feature-image" loading="lazy" />
             </div>
           </motion.div>
-
-          {/* Feature 4 */}
-          <motion.div className="feature-item reverse" variants={itemVariants}>
-            <div className="feature-text">
-              <div className="step-number">04</div>
-              <h3 className="feature-title">İşini Ücretsiz Büyüt</h3>
-              <p className="feature-desc">
-                Hizmetlerini platformda sergileyerek hiçbir ücret ödemeden binlerce yeni müşteriye doğrudan ulaş.
-              </p>
-            </div>
-            <div className="feature-image-wrapper glass-panel">
-              <img src="/company.png" alt="İşini Ücretsiz Büyüt" className="feature-image" loading="lazy" />
-            </div>
-          </motion.div>
-
         </motion.div>
       </div>
     </section>
