@@ -12,7 +12,9 @@ export default function Footer() {
               <div className="logo-icon">
                 <CalendarDays size={28} />
               </div>
-              <span className="logo-text">Organizasyol</span>
+              <span className="logo-text">
+                Organizas<span className="text-gradient">yol</span>
+              </span>
             </div>
             <p className="footer-desc">
               Organizasyon Planlamak da, İşini Büyütmek de Artık Çok Kolay!

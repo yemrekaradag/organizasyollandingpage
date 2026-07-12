@@ -19,9 +19,7 @@ const screens = [
 ];
 
 export default function Hero() {
-  const [activeTab, setActiveTab] = useState('user');
-  // Screens for the phone-mockup
-
+  const [activeTab, setActiveTab] = useState("user");
   const [currentScreen, setCurrentScreen] = useState(0);
 
   useEffect(() => {
@@ -31,7 +29,6 @@ export default function Hero() {
 
     return () => clearInterval(interval);
   }, []);
-
 
   return (
     <section className="hero">
@@ -43,19 +40,21 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <h1 className="hero-title">
-            <span className="text-gradient">Organizasyon</span> Planlamak da, İşini Büyütmek de Artık Çok Kolay!
+            <span className="text-gradient">Organizasyon</span>
+            <br></br>
+            Bulmak da, İşini Büyütmek de Artık Çok Kolay!
           </h1>
-          
+
           <div className="hero-tabs">
-            <button 
-              className={`tab-btn ${activeTab === 'user' ? 'active' : ''}`}
-              onClick={() => setActiveTab('user')}
+            <button
+              className={`tab-btn ${activeTab === "user" ? "active" : ""}`}
+              onClick={() => setActiveTab("user")}
             >
               Organizasyon mu arıyorsun ?
             </button>
-            <button 
-              className={`tab-btn ${activeTab === 'business' ? 'active' : ''}`}
-              onClick={() => setActiveTab('business')}
+            <button
+              className={`tab-btn ${activeTab === "business" ? "active" : ""}`}
+              onClick={() => setActiveTab("business")}
             >
               Hizmet Veren veya Mekan Sahibi misin?
             </button>
@@ -63,8 +62,8 @@ export default function Hero() {
 
           <div className="tab-content-container">
             <AnimatePresence mode="wait">
-              {activeTab === 'user' && (
-                <motion.p 
+              {activeTab === "user" && (
+                <motion.p
                   key="user"
                   className="hero-subtitle"
                   initial={{ opacity: 0, y: 10 }}
@@ -72,11 +71,13 @@ export default function Hero() {
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.3 }}
                 >
-                  Aradığın tüm hizmetleri ve mekanları tek bir yerde bul; aracı ve komisyon olmadan, doğrudan iletişimle hayalindeki organizasyona ulaş.
+                  Aradığın tüm hizmetleri ve mekanları tek bir yerde bul; aracı
+                  ve komisyon olmadan, doğrudan iletişimle hayalindeki
+                  organizasyona ulaş.
                 </motion.p>
               )}
-              {activeTab === 'business' && (
-                <motion.p 
+              {activeTab === "business" && (
+                <motion.p
                   key="business"
                   className="hero-subtitle"
                   initial={{ opacity: 0, y: 10 }}
@@ -84,7 +85,9 @@ export default function Hero() {
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.3 }}
                 >
-                  Organizasyol’da hemen yerini al; komisyon ödemeden, müşterilerinle doğrudan WhatsApp üzerinden konuş ve kazancını katla.
+                  Organizasyol’da hemen yerini al; komisyon ödemeden,
+                  müşterilerinle doğrudan WhatsApp üzerinden konuş ve kazancını
+                  katla.
                 </motion.p>
               )}
             </AnimatePresence>
@@ -113,10 +116,10 @@ export default function Hero() {
                 src={screens[currentScreen]}
                 alt="Organizasyol App Screen"
                 className="phone-screen"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                initial={{ opacity: 0, scale: 1.04 }}
+                animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0 }}
-                transition={{ duration: 0.35, ease: "easeInOut" }}
+                transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
               />
             </AnimatePresence>
           </div>

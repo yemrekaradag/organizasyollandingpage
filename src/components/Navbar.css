@@ -40,6 +40,12 @@
   font-weight: 800;
   letter-spacing: -0.5px;
   color: var(--text-main);
+  display: inline-flex;
+  align-items: center;
+}
+
+.logo-suffix {
+  display: inline-block;
 }
 
 .btn-sm {
