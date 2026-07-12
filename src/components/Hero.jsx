@@ -116,12 +116,37 @@ export default function Hero() {
                 src={screens[currentScreen]}
                 alt="Organizasyol App Screen"
                 className="phone-screen"
+                decoding="async"
+                fetchPriority={currentScreen < 2 ? "high" : "auto"}
                 initial={{ opacity: 0, scale: 1.04 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
               />
             </AnimatePresence>
+          </div>
+          {/* Hidden Eager Loader - Tarayıcıyı tüm resimleri anında indirmeye zorlar */}
+          <div
+            aria-hidden="true"
+            style={{
+              position: "absolute",
+              width: 0,
+              height: 0,
+              overflow: "hidden",
+              opacity: 0,
+              pointerEvents: "none",
+            }}
+          >
+            {screens.map((src, idx) => (
+              <img
+                key={src}
+                src={src}
+                alt=""
+                loading="eager"
+                decoding="async"
+                fetchPriority={idx < 2 ? "high" : "auto"}
+              />
+            ))}
           </div>
           {/* Decorative Elements */}
           <div className="floating-bubble bubble-1"></div>
