@@ -101,20 +101,19 @@
 .phone-mockup {
   width: 320px;
   height: 650px;
-  border-radius: 40px;
   padding: 12px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 2px solid var(--glass-border);
   position: relative;
   z-index: 10;
   box-shadow: 0 25px 50px -12px rgba(90, 24, 154, 0.5);
+  overflow: hidden;
 }
 
 .phone-screen {
-  width: 100%;
+  display: block;
+  width: 116%;
   height: 100%;
-  border-radius: 30px;
   object-fit: cover;
+  border-radius: inherit;
 }
 
 .floating-bubble {
