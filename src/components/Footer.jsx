@@ -1,4 +1,5 @@
-import { CalendarDays, Camera } from "lucide-react";
+import { CalendarDays } from "lucide-react";
+import { FaInstagram } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./Footer.css";
 
@@ -50,7 +51,7 @@ export default function Footer() {
                 rel="noreferrer"
                 className="social-btn glass-panel"
               >
-                <Camera size={24} />
+                <FaInstagram size={26} />
               </a>
             </div>
           </div>
