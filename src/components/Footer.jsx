@@ -59,11 +59,36 @@ export default function Footer() {
 
         <div className="footer-bottom">
           <div className="legal-links">
-            <Link to="/aydinlatma">Aydınlatma Metni</Link>
-            <a href="#veri-saklama">Veri Saklama ve İmha Politikası</a>
-            <a href="#veri-ihlal">Veri İhlal Müdahale Planı</a>
-            <a href="#gizlilik">Gizlilik Politikası</a>
-            <a href="#kullanim">Kullanım Koşulları</a>
+            <Link
+              to="/aydinlatma"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            >
+              Aydınlatma Metni
+            </Link>
+            <Link
+              to="/veri-saklama"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            >
+              Veri Saklama ve İmha Politikası
+            </Link>
+            <Link
+              to="/veri-ihlal"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            >
+              Veri İhlal Müdahale Planı
+            </Link>
+            <Link
+              to="/gizlilik"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            >
+              Gizlilik Politikası
+            </Link>
+            <Link
+              to="/kullanim"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            >
+              Kullanım Koşulları
+            </Link>
           </div>
           <p className="copyright">
             &copy; {new Date().getFullYear()} Organizasyol. Tüm hakları
