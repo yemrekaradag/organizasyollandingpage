@@ -1,7 +1,17 @@
 import { CalendarDays } from "lucide-react";
 import { FaInstagram } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import appStoreBadge from "../assets/app-store-badge.svg";
+import googlePlayBadge from "../assets/google-play-badge.svg";
 import "./Footer.css";
+
+// Footer'da öne çıkarılan kategoriler (SEO iç linkleme)
+const FOOTER_CATEGORIES = [
+  { slug: "dugun-organizasyonu", name: "Düğün Organizasyonu" },
+  { slug: "dogum-gunu", name: "Doğum Günü Partisi" },
+  { slug: "kurumsal-etkinlik", name: "Kurumsal Etkinlik" },
+  { slug: "mekan-kiralama", name: "Mekan Kiralama" },
+];
 
 export default function Footer() {
   return (
@@ -25,19 +35,25 @@ export default function Footer() {
           </div>
 
           <div className="footer-links-group">
+            <h4 className="footer-title">Blog & Rehberler</h4>
+            <nav className="footer-nav" aria-label="Blog bağlantıları">
+              <Link to="/blog">Tüm Yazılar</Link>
+              {FOOTER_CATEGORIES.map((cat) => (
+                <Link key={cat.slug} to={`/blog/kategori/${cat.slug}`}>
+                  {cat.name}
+                </Link>
+              ))}
+            </nav>
+          </div>
+
+          <div className="footer-links-group">
             <h4 className="footer-title">Uygulamayı İndir</h4>
             <div className="store-buttons">
-              <a href="#appstore" className="store-btn">
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
-                  alt="App Store"
-                />
+              <a href="#appstore" className="store-btn" aria-label="App Store'dan indir">
+                <img src={appStoreBadge} alt="App Store'dan indir" width={135} height={40} />
               </a>
-              <a href="#playstore" className="store-btn">
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-                  alt="Google Play"
-                />
+              <a href="#playstore" className="store-btn" aria-label="Google Play'den indir">
+                <img src={googlePlayBadge} alt="Google Play'den indir" width={135} height={40} />
               </a>
             </div>
           </div>
@@ -50,8 +66,9 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 className="social-btn glass-panel"
+                aria-label="Organizasyol Instagram sayfası"
               >
-                <FaInstagram size={26} />
+                <FaInstagram size={26} aria-hidden="true" />
               </a>
             </div>
           </div>
@@ -59,36 +76,11 @@ export default function Footer() {
 
         <div className="footer-bottom">
           <div className="legal-links">
-            <Link
-              to="/aydinlatma"
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            >
-              Aydınlatma Metni
-            </Link>
-            <Link
-              to="/veri-saklama"
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            >
-              Veri Saklama ve İmha Politikası
-            </Link>
-            <Link
-              to="/veri-ihlal"
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            >
-              Veri İhlal Müdahale Planı
-            </Link>
-            <Link
-              to="/gizlilik"
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            >
-              Gizlilik Politikası
-            </Link>
-            <Link
-              to="/kullanim"
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            >
-              Kullanım Koşulları
-            </Link>
+            <Link to="/aydinlatma">Aydınlatma Metni</Link>
+            <Link to="/veri-saklama">Veri Saklama ve İmha Politikası</Link>
+            <Link to="/veri-ihlal">Veri İhlal Müdahale Planı</Link>
+            <Link to="/gizlilik">Gizlilik Politikası</Link>
+            <Link to="/kullanim">Kullanım Koşulları</Link>
           </div>
           <p className="copyright">
             &copy; {new Date().getFullYear()} Organizasyol. Tüm hakları

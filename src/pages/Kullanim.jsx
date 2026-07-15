@@ -1,10 +1,15 @@
-import React from 'react';
 import { motion } from 'framer-motion';
+import Seo from '../components/Seo';
 import './Aydinlatma.css';
 
 export default function Kullanim() {
   return (
     <div className="legal-page">
+      <Seo
+        title="Kullanıcı Üyelik ve Kullanım Sözleşmesi (EULA) | Organizasyol"
+        description="Organizasyol uygulaması kullanıcı üyelik ve kullanım sözleşmesi (EULA) koşulları."
+        path="/kullanim"
+      />
       <div className="container">
         <motion.div
           className="legal-header"

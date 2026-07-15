@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { CalendarDays } from "lucide-react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const suffixes = [
@@ -32,7 +33,7 @@ export default function Navbar() {
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
       <div className="container navbar-container">
-        <a href="/" className="logo">
+        <Link to="/" className="logo" aria-label="Organizasyol ana sayfa">
           <div className="logo-icon">
             <CalendarDays size={28} />
           </div>
@@ -51,9 +52,9 @@ export default function Navbar() {
               </motion.span>
             </AnimatePresence>
           </span>
-        </a>
+        </Link>
         <div className="nav-actions">
-          <a href="#download" className="btn-primary btn-sm">
+          <a href="/#download" className="btn-primary btn-sm">
             Uygulamayı İndir
           </a>
         </div>

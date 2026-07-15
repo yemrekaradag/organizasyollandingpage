@@ -17,5 +17,9 @@ export default defineConfig([
       globals: globals.browser,
       parserOptions: { ecmaFeatures: { jsx: true } },
     },
+    rules: {
+      // Bir prop'u rest ile ayıklayıp (ör. `node`) DOM'a geçmemek için:
+      'no-unused-vars': ['error', { ignoreRestSiblings: true }],
+    },
   },
 ])

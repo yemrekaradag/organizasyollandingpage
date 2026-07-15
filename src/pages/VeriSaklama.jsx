@@ -1,10 +1,15 @@
-import React from 'react';
 import { motion } from 'framer-motion';
+import Seo from '../components/Seo';
 import './Aydinlatma.css';
 
 export default function VeriSaklama() {
   return (
     <div className="legal-page">
+      <Seo
+        title="Veri Saklama ve İmha Politikası | Organizasyol"
+        description="Organizasyol kişisel verilerin saklanması ve imhasına ilişkin politika ve süreçler."
+        path="/veri-saklama"
+      />
       <div className="container">
         <motion.div
           className="legal-header"

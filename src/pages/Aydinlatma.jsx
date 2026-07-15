@@ -1,10 +1,15 @@
-import React from 'react';
 import { motion } from 'framer-motion';
+import Seo from '../components/Seo';
 import './Aydinlatma.css';
 
 export default function Aydinlatma() {
   return (
     <div className="legal-page">
+      <Seo
+        title="KVKK Aydınlatma Metni | Organizasyol"
+        description="Organizasyol KVKK kapsamında kişisel verilerin işlenmesine ilişkin aydınlatma metni."
+        path="/aydinlatma"
+      />
       <div className="container">
         <motion.div
           className="legal-header"
