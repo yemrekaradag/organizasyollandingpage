@@ -4,18 +4,28 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predev": "node scripts/generate-sitemap.mjs",
     "dev": "vite",
+    "prebuild": "node scripts/generate-sitemap.mjs",
     "build": "vite build",
+    "sitemap": "node scripts/generate-sitemap.mjs",
+    "optimize:images": "bash scripts/optimize-images.sh",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource-variable/outfit": "^5.2.8",
     "framer-motion": "^12.40.0",
+    "github-slugger": "^2.0.0",
     "lucide-react": "^1.17.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "react-icons": "^5.7.0",
-    "react-router-dom": "^7.18.1"
+    "react-markdown": "^10.1.0",
+    "react-router-dom": "^7.18.1",
+    "rehype-autolink-headings": "^7.1.0",
+    "rehype-slug": "^6.0.0",
+    "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

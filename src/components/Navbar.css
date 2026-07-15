@@ -23,6 +23,23 @@
   gap: 12px;
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.nav-link {
+  color: var(--text-main);
+  font-weight: 600;
+  font-size: 0.98rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--primary-light);
+}
+
 .logo-icon {
   width: 48px;
   height: 48px;

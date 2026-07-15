@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
 import './Features.css';
-import discover from "../assets/discover.png";
-import contact from "../assets/contact.png";
-import commission from "../assets/commission.jpeg";
+import discover from "../assets/discover.webp";
+import contact from "../assets/contact.webp";
+import commission from "../assets/commission.webp";
 
 
 export default function Features() {
@@ -46,7 +46,7 @@ export default function Features() {
               </p>
             </div>
             <div className="feature-image-wrapper glass-panel">
-              <img src={discover} alt="Keşfet ve İncele" className="feature-image" loading="lazy" />
+              <img src={discover} alt="Organizasyol'da organizasyon hizmetlerini ve mekanları keşfetme ekranı" className="feature-image" width={1600} height={802} loading="lazy" />
             </div>
           </motion.div>
 
@@ -60,7 +60,7 @@ export default function Features() {
               </p>
             </div>
             <div className="feature-image-wrapper glass-panel">
-              <img src={contact} alt="Doğrudan İletişim" className="feature-image" loading="lazy" />
+              <img src={contact} alt="Hizmet verenle WhatsApp üzerinden doğrudan iletişim ekranı" className="feature-image" width={1600} height={802} loading="lazy" />
             </div>
           </motion.div>
 
@@ -74,7 +74,7 @@ export default function Features() {
               </p>
             </div>
             <div className="feature-image-wrapper glass-panel">
-              <img src={commission} alt="Ücretsiz ve Komisyonsuz" className="feature-image" loading="lazy" />
+              <img src={commission} alt="Aracısız, komisyonsuz ve ücretsiz kullanım" className="feature-image" width={1400} height={1098} loading="lazy" />
             </div>
           </motion.div>
         </motion.div>

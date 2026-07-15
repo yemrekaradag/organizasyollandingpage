@@ -24,7 +24,8 @@
   );
   --gradient-text: linear-gradient(to right, #c77dff, #e0aaff);
 
-  font-family: "Outfit", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Outfit Variable", "Outfit", system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -179,6 +180,11 @@ h6 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
+}
+
+/* Lazy route yüklenirken içerik yer tutucu (CLS'i önler) */
+.route-fallback {
+  min-height: 80vh;
 }
 
 @media (max-width: 480px) {

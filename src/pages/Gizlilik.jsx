@@ -1,10 +1,15 @@
-import React from 'react';
 import { motion } from 'framer-motion';
+import Seo from '../components/Seo';
 import './Aydinlatma.css';
 
 export default function Gizlilik() {
   return (
     <div className="legal-page">
+      <Seo
+        title="Gizlilik Politikası | Organizasyol"
+        description="Organizasyol gizlilik politikası: kişisel verilerinizi nasıl topladığımız, kullandığımız ve koruduğumuz hakkında bilgi."
+        path="/gizlilik"
+      />
       <div className="container">
         <motion.div
           className="legal-header"

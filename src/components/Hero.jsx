@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { FaApple, FaGooglePlay } from "react-icons/fa";
 import "./Hero.css";
-import homeScreen from "../assets/home-screen.png";
-import organization from "../assets/organization.png";
-import reel1 from "../assets/reel-1.png";
-import reel2 from "../assets/reel-2.png";
-import organizationDetail from "../assets/organization-detail.png";
-import organizationDetail2 from "../assets/organization-detail-2.png";
+import homeScreen from "../assets/home-screen.webp";
+import organization from "../assets/organization.webp";
+import reel1 from "../assets/reel-1.webp";
+import reel2 from "../assets/reel-2.webp";
+import organizationDetail from "../assets/organization-detail.webp";
+import organizationDetail2 from "../assets/organization-detail-2.webp";
 
 const screens = [
   homeScreen,
@@ -32,12 +32,14 @@ export default function Hero() {
 
   return (
     <section className="hero">
+      {/* LCP görselini erken keşfet (React 19 head'e taşır) */}
+      <link rel="preload" as="image" href={screens[0]} fetchPriority="high" />
       <div className="container hero-container">
         <motion.div
           className="hero-content"
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial={{ x: -30 }}
+          animate={{ x: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
         >
           <h1 className="hero-title">
             <span className="text-gradient">Organizasyon</span>
@@ -45,16 +47,20 @@ export default function Hero() {
             Bulmak da, İşini Büyütmek de Artık Çok Kolay!
           </h1>
 
-          <div className="hero-tabs">
+          <div className="hero-tabs" role="tablist" aria-label="Kullanıcı türü">
             <button
               className={`tab-btn ${activeTab === "user" ? "active" : ""}`}
               onClick={() => setActiveTab("user")}
+              role="tab"
+              aria-selected={activeTab === "user"}
             >
               Organizasyon mu arıyorsun ?
             </button>
             <button
               className={`tab-btn ${activeTab === "business" ? "active" : ""}`}
               onClick={() => setActiveTab("business")}
+              role="tab"
+              aria-selected={activeTab === "business"}
             >
               Hizmet Veren veya Mekan Sahibi misin?
             </button>
@@ -105,48 +111,28 @@ export default function Hero() {
         </motion.div>
         <motion.div
           className="hero-image-wrapper"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={{ scale: 0.92 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
         >
           <div className="phone-mockup glass-panel">
-            <AnimatePresence mode="wait">
+            {/* initial={false}: ilk görsel anında boyanır (LCP), sonrakiler crossfade */}
+            <AnimatePresence mode="wait" initial={false}>
               <motion.img
                 key={screens[currentScreen]}
                 src={screens[currentScreen]}
-                alt="Organizasyol App Screen"
+                alt="Organizasyol uygulaması ekran görüntüsü"
                 className="phone-screen"
+                width={2553}
+                height={1280}
                 decoding="async"
-                fetchPriority={currentScreen < 2 ? "high" : "auto"}
-                initial={{ opacity: 0, scale: 1.04 }}
-                animate={{ opacity: 1, scale: 1 }}
+                fetchPriority={currentScreen === 0 ? "high" : "auto"}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
               />
             </AnimatePresence>
-          </div>
-          {/* Hidden Eager Loader - Tarayıcıyı tüm resimleri anında indirmeye zorlar */}
-          <div
-            aria-hidden="true"
-            style={{
-              position: "absolute",
-              width: 0,
-              height: 0,
-              overflow: "hidden",
-              opacity: 0,
-              pointerEvents: "none",
-            }}
-          >
-            {screens.map((src, idx) => (
-              <img
-                key={src}
-                src={src}
-                alt=""
-                loading="eager"
-                decoding="async"
-                fetchPriority={idx < 2 ? "high" : "auto"}
-              />
-            ))}
           </div>
           {/* Decorative Elements */}
           <div className="floating-bubble bubble-1"></div>

@@ -1,10 +1,15 @@
-import React from 'react';
 import { motion } from 'framer-motion';
+import Seo from '../components/Seo';
 import './Aydinlatma.css';
 
 export default function VeriIhlal() {
   return (
     <div className="legal-page">
+      <Seo
+        title="Veri İhlal Müdahale Planı | Organizasyol"
+        description="Organizasyol veri ihlali durumunda uygulanan müdahale planı ve prosedürleri."
+        path="/veri-ihlal"
+      />
       <div className="container">
         <motion.div
           className="legal-header"
