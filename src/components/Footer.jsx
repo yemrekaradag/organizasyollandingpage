@@ -1,4 +1,3 @@
-import { CalendarDays } from "lucide-react";
 import { FaInstagram } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./Footer.css";
@@ -10,9 +9,6 @@ export default function Footer() {
         <div className="footer-top">
           <div className="footer-brand">
             <div className="logo">
-              <div className="logo-icon">
-                <CalendarDays size={28} />
-              </div>
               <span className="logo-text">
                 Organizas<span className="text-gradient">yol</span>
               </span>

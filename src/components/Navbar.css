@@ -20,19 +20,6 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
-}
-
-.logo-icon {
-  width: 48px;
-  height: 48px;
-  background: var(--gradient-primary);
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  box-shadow: 0 4px 15px rgba(157, 78, 221, 0.4);
 }
 
 .logo-text {
@@ -56,14 +43,6 @@
 @media (max-width: 480px) {
   .logo-text {
     font-size: 1.2rem;
-  }
-  .logo-icon {
-    width: 36px;
-    height: 36px;
-  }
-  .logo-icon svg {
-    width: 20px;
-    height: 20px;
   }
   .btn-sm {
     padding: 8px 12px;

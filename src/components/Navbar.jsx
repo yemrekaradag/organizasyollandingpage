@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { CalendarDays } from "lucide-react";
 import "./Navbar.css";
 
 const suffixes = [
@@ -33,9 +32,6 @@ export default function Navbar() {
     >
       <div className="container navbar-container">
         <a href="/" className="logo">
-          <div className="logo-icon">
-            <CalendarDays size={28} />
-          </div>
           <span className="logo-text">
             <span>Organizas</span>
             <AnimatePresence mode="wait">
